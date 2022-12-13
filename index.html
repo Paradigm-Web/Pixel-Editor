@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="app.js" defer></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+    <link rel="icon" type="image/x-icon" href="src/paradigm.png">
+    <link rel="stylesheet" href="styles.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Pixel</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="header"></div>
+        <div class="container">
+            <div class="controls controls-content">
+                <div class="color-wrapper">
+                    <p id="color-title">Color</p>
+                    <input type="color" id="color-picker">
+                    <div class="control-btn">
+                        <button id="toggle-shading" class="btn">Enable Shading</button>
+                    </div>
+                    <div class="slider">
+                        <input id="strength-slider" class="slider-disabled" type="range" min="5" max="100" value="50" oninput="strength_value.innerText = `Strength: ` + this.value + `%`">
+                    </div>
+                    <div class="slider-text">
+                        <p id="strength_value" class="disabled">Strength: 50%</p>
+                    </div>
+                    
+                </div>
+                <div class="brush-wrapper">
+                    <div class="slider">
+                        <input id="brush-slider" type="range" min="1" max="6" value="1" oninput="brush_value.innerText = `Brush Size: ` + this.value">
+                    </div>
+                    <div class="slider-text">
+                        <p id="brush_value">Brush Size: 1</p>
+                    </div>
+                </div>
+                <div class="tools-wrapper">
+                    <div class="tool"><img src="src/format-color-fill.png" title="Fill Color" id="fill" draggable="false"></div>
+                    <div class="tool"><img src="src/eraser.png" title="Eraser" id="eraser" draggable="false"></div>
+                    <div class="tool"><img src="src/eyedropper.png" title="Eyedropper" id="eyedrop" draggable="false"></div>
+                    <div class="tool"><img src="src/square.png" title="Pixel Style" id="pixelType" draggable="false" data="square"></div>
+                    <!-- <div class="tool"><img src="src/eraser.png" title="Eraser" id=""></div>
+                    <div class="tool"><img src="src/eraser.png" title="Eraser" id=""></div>
+                    <div class="tool"><img src="src/eraser.png" title="Eraser" id=""></div>
+                    <div class="tool"><img src="src/eraser.png" title="Eraser" id=""></div>
+                    <div class="tool"><img src="src/eraser.png" title="Eraser" id=""></div> -->
+                </div>
+                <div class="grid-wrapper">
+                    <div class="control-btn">
+                        <button id="toggle-grid" class="btn">Hide Grid</button>
+                    </div>
+                    <div class="slider">
+                        <input id="grid-slider" type="range" min="6" max="64" value="16" oninput="range_value.innerText = `Grid Size: ` + this.value + `x` + this.value">
+                    </div>
+                    <div class="slider-text">
+                        <p id="range_value">Grid Size: 16x16</p>
+                    </div>
+                </div>
+                <div class="clear-wrapper">
+                    <div class="control-btn">
+                        <button id="clear" class="btn">Clear</button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="canvas-wrapper">
+                <div class="canvas" oncontextmenu="return false"></div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>
