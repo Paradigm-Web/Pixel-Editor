@@ -368,6 +368,11 @@ input[class=slider-disabled]::-webkit-slider-thumb {
     width: 90%;
 }
 
+footer {
+    letter-spacing: normal;
+    font-family: 'Courier New', Courier, monospace;
+    color: gray;
+}
 
 
 
